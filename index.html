@@ -43,6 +43,7 @@
         seconds--;
         setTimeout(countdown, 1000);
       } else {
+        // This will redirect in the same window
         window.location.href = "https://gemini.google.com/u/1/app";
       }
     }
@@ -53,12 +54,14 @@
   <h1>Please choose a site to visit:</h1>
   <p id="countdown">Redirecting to Gemini App in 5 seconds...</p>
   <ul>
-    <li><a href="https://gemini.google.com/u/1/app" target="_blank" rel="noopener noreferrer">Go to Gemini App</a></li>
-    <li><a href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer">Go to Perplexity AI</a></li>
-    <li><a href="https://chat.aifiesta.ai/#" target="_blank" rel="noopener noreferrer">Go to AI Fiesta</a></li>
-    <li><a href="https://bitly.com/" target="_blank" rel="noopener noreferrer">Go to Bitly</a></li>
-    <li><a href="https://tinyurl.com/" target="_blank" rel="noopener noreferrer">Go to TinyURL</a></li>
-    <li><a href="https://cutt.ly/" target="_blank" rel="noopener noreferrer">Go to Cutt.ly</a></li>
+    <li><a href="https://gemini.google.com/">Go to Gemini</a></li>
+    <li><a href="https://gemini.google.com/u/1/app">Go to Gemini App</a></li>
+    <li><a href="https://drive.google.com/">Go to Google Drive</a></li>
+    <li><a href="https://www.perplexity.ai/">Go to Perplexity AI</a></li>
+    <li><a href="https://chat.aifiesta.ai/#">Go to AI Fiesta</a></li>
+    <li><a href="https://bitly.com/">Go to Bitly</a></li>
+    <li><a href="https://tinyurl.com/">Go to TinyURL</a></li>
+    <li><a href="https://cutt.ly/">Go to Cutt.ly</a></li>
   </ul>
 </body>
 </html>
