@@ -11,7 +11,11 @@
       color: #333;
     }
     h1 {
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    p#countdown {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
     }
     ul {
       list-style: none;
@@ -30,11 +34,26 @@
       text-decoration: underline;
     }
   </style>
+  <script>
+    let seconds = 5;
+    function countdown() {
+      const countdownEl = document.getElementById('countdown');
+      if (seconds > 0) {
+        countdownEl.textContent = `Redirecting to Gemini App in ${seconds} second${seconds > 1 ? 's' : ''}... Click any link below to go now.`;
+        seconds--;
+        setTimeout(countdown, 1000);
+      } else {
+        window.location.href = "https://gemini.google.com/u/1/app";
+      }
+    }
+    window.onload = countdown;
+  </script>
 </head>
 <body>
   <h1>Please choose a site to visit:</h1>
+  <p id="countdown">Redirecting to Gemini App in 5 seconds...</p>
   <ul>
-    <li><a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Go to Gemini App</a></li>
+    <li><a href="https://gemini.google.com/u/1/app" target="_blank" rel="noopener noreferrer">Go to Gemini App</a></li>
     <li><a href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer">Go to Perplexity AI</a></li>
     <li><a href="https://chat.aifiesta.ai/#" target="_blank" rel="noopener noreferrer">Go to AI Fiesta</a></li>
     <li><a href="https://bitly.com/" target="_blank" rel="noopener noreferrer">Go to Bitly</a></li>
@@ -43,4 +62,3 @@
   </ul>
 </body>
 </html>
-
